@@ -26,6 +26,11 @@ export default class UserMessage {
     public static readonly INVALID_CPF = 'invalid cpf'
 
     /**
+     * used when cpf is invalid
+     */
+    public static readonly INVALID_EMAIL = 'invalid email'
+
+    /**
      * used when password contain at least eight characters
      */
     public static readonly INVALID_NUMBER_OF_CHARACTERS = 'must contain at least eight characters'
