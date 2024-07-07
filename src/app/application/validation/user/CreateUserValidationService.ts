@@ -23,6 +23,7 @@ export default class CreateUserValidationService extends UserModel {
             password: this._password(user.password)
         }]
 
+        console.log(minhaLista)
     }
 
     /**

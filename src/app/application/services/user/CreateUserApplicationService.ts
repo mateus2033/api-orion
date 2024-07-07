@@ -17,6 +17,7 @@ export default class CreateUserApplicationService implements CreateUserApplicati
 
         try {
             const test = this.createUserValidationService.execute(user)
+            console.log(test)
         } catch (erro) {
             console.error('Ocorreu um erro:', erro.message)
         }
