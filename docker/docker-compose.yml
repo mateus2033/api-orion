@@ -2,7 +2,7 @@ services:
   app:
     build:
       context: ..
-      dockerfile: .infra/Dockerfile
+      dockerfile: docker/Dockerfile
     container_name: node_app
     restart: always
     volumes:
