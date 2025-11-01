@@ -3,8 +3,6 @@ import express, { Express, Request, Response, NextFunction } from 'express'
 import Cors from 'cors'
 import { config } from 'dotenv'
 import initializeDB from './database'
-import UsersRouter from './app/presentation/routes/user/UserRouter'
-import AddressRouter from './app/presentation/routes/address/AddressRouter'
 
 const log = debug('feedback-api:app')
 
@@ -35,8 +33,8 @@ class App {
       }
 
     public routes () {
-        this.express.use('/user', UsersRouter)
-        this.express.use('/address', AddressRouter)
+        //this.express.use('/user', UsersRouter)
+        //this.express.use('/address', AddressRouter)
     }
 }
 

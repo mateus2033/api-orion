@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
-import UserModel from '../app/domain/models/UserModel'
-import AddressModel from '../app/domain/models/AddressModel'
+import UserModel from '../app/domain/model/User'
+import AddressModel from '../app/domain/model/Address'
 
 export default new DataSource({
     type: 'mysql',
@@ -13,8 +13,8 @@ export default new DataSource({
     synchronize: true,
     logging: false,
     entities: [
-        UserModel,
-        AddressModel
+        AddressModel,
+        UserModel
     ],
     migrations: ['./src/database/migrations/*.ts'],
     subscribers: []
