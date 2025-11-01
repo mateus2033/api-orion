@@ -16,6 +16,11 @@ services:
       - DB_USER=dev
       - DB_PASSWORD=123456
       - DB_NAME=database
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true  # Importante!
+    stdin_open: true
+    tty: true
+
     depends_on:
       - db
 

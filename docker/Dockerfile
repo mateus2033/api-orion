@@ -1,20 +1,19 @@
-# Etapa 1: imagem base
-FROM node:20-alpine
+FROM node:18
 
-# Define o diretório de trabalho dentro do container
 WORKDIR /usr/src/app
 
-# Copia apenas os arquivos de dependência primeiro (melhora o cache do build)
-COPY ../package*.json ./
+# Copie os arquivos de dependências
+COPY package*.json ./
+COPY tsconfig.json ./
 
-# Instala as dependências (sem dev se quiser otimizar produção)
-RUN npm install --save-dev wait-port
+# Instale as dependências
+RUN npm install
 
-# Copia o restante do código da aplicação
-COPY ../ .
+# Copie o código
+COPY . .
 
-# Expõe a porta padrão usada pela aplicação (ex: 3000)
+# Exponha a porta
 EXPOSE 3000
 
-# Comando padrão para rodar o app
+# Use o script dev que já está configurado
 CMD ["npm", "run", "dev"]
