@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc",
-    "dev": "nodemon --legacy-watch --polling-interval 1000 --exec ts-node src/server.ts",
+    "dev": "nodemon --watch src --exec ts-node -r tsconfig-paths/register src/server.ts",
     "test": "jest",
     "start": "ts-node src/server.ts",
     "typeorm": "typeorm-ts-node-commonjs"

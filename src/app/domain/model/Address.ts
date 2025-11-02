@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany, ManyToOne } from 'typeorm';
-import User from '../model/User'
+import User from '@models/User'
 
 @Entity('addresses')
 export default class Address { 
