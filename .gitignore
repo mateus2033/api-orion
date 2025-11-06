@@ -2,3 +2,5 @@ node_modules
 mysql
 dist
 .env
+
+src/database/migrations

@@ -8,7 +8,11 @@
     "dev": "nodemon --watch src --exec ts-node -r tsconfig-paths/register src/server.ts",
     "test": "jest",
     "start": "ts-node src/server.ts",
-    "typeorm": "typeorm-ts-node-commonjs"
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d src/database/data-source.ts",
+    "migration:generate": "npm run typeorm -- migration:generate src/database/migrations/Migration",
+    "migration:create": "npm run typeorm -- migration:create src/database/migrations/Migration",
+    "migration:run": "npm run typeorm -- migration:run",
+    "migration:revert": "npm run typeorm -- migration:revert"
   },
   "keywords": [],
   "author": "",

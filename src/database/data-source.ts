@@ -1,11 +1,11 @@
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
-import UserModel from '../app/domain/model/User'
-import AddressModel from '../app/domain/model/Address'
+import UserModel from '@models/User'
+import AddressModel from '@models/Address'
 
 export default new DataSource({
     type: 'mysql',
-    host: 'localhost',
+    host: 'db',
     port: 3306,
     username: 'dev',
     password: '123456',
