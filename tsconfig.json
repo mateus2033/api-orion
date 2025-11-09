@@ -12,7 +12,8 @@
     "baseUrl": "src",
     "paths": {
         "@models/*": ["app/domain/model/*"],
-        "@models": ["app/domain/model"] 
+        "@models": ["app/domain/model"],
+        "@controllers/*":["app/api/controller/*"]
     }
   }
 }
